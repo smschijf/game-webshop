@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 10% 90%;
+}
+
+header {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+header i {
+    grid-column: 2;
+}
+
+nav {
+    background-color: #467CF1;
+    color: white;
+    grid-row: 1 / span 2;
+}

@@ -1,0 +1,51 @@
+.inner-container {
+    padding-left: 50px;
+}
+
+.table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80%;
+}
+
+.column-title {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.column {
+    line-height: 3em;
+}
+
+.button-edit {
+    background-color: #467CF1;
+    margin: 1em 1em 0.5em 0;
+    height: 2em;
+    border: none;
+    width: 2em;
+}
+
+.button-delete {
+    background-color: #FF5E4B;
+    height: 2em;
+    border: none;
+    width: 2em;
+}
+
+.bxs-edit-alt {
+    color: white;
+}
+
+.bx-minus-circle {
+    color: white;
+}
+
+.product-add {
+    background-color: #467CF1;
+    text-decoration: none;
+    color: white;
+    border: none;
+    height: 2.5em;
+    width: 7em;
+    font-size: 1.1em;
+}
