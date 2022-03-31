@@ -1,4 +1,6 @@
 <nav>
-    <a href="product_list.php">home</a>
-    <a href="add_product.php">add product</a>
+    <a href="product_list.php">
+    <i class='bx bx-home-alt-2'></i>
+      home
+    </a>
 </nav>

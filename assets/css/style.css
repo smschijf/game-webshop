@@ -29,4 +29,12 @@ nav {
     background-color: #467CF1;
     color: white;
     grid-row: 1 / span 2;
+    display: grid;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  margin: 10px;
 }
