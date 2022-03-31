@@ -7,6 +7,7 @@
 
         if($result) {
             echo "Deleted succesfull";
+            header("location:product_list.php");
         } else {
             die(mysqli_error($conn));
         }
