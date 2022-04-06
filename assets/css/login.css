@@ -59,4 +59,5 @@ form input[type="submit"] {
   text-align: center;
   color: #467CF1;
   font-size: 15px;
+  cursor: pointer;
 }

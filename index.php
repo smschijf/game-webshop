@@ -12,8 +12,8 @@
     <div class="form-container">
       <form method="post">
         <h3>Login</h3>
-        <div class="input-label">Username</div>
-        <input type="text" name="user_name">
+        <div class="input-label">Email Address</div>
+        <input type="text" name="email_address">
         <div class="input-label">Password</div>
         <input type="password" name="password">
         <input type="submit" value="Login">

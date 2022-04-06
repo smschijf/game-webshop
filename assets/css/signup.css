@@ -28,7 +28,7 @@ html, body {
 
 form {
   display: grid;
-  grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr 2fr;
+  grid-template-rows: 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 1fr 2fr;
   height: 100%;
 }
 
@@ -60,4 +60,5 @@ form input[type="submit"] {
   text-align: center;
   color: #467CF1;
   font-size: 15px;
+  cursor: pointer;
 }
