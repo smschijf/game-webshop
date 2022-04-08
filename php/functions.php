@@ -14,6 +14,6 @@ function check_login($conn)
       return $user_data;
     }
   }
-  header("Location: ../index.php");
+  header("Location: product_list.php");
   die;
 }

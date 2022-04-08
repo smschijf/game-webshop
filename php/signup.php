@@ -15,9 +15,11 @@
       $house_number = $_POST['house_number'];
       $email_address = $_POST['email_address'];
       $password = $_POST['password'];
+      $house_number_addon = $_POST['house_number_addon'];
+      $phone = $_POST['phone'];
 
-      $query = "INSERT INTO customer(first_name, middle_name, last_name, city, street, house_number, email_address, `password`) 
-      VALUES ('$first_name', '$middle_name', '$last_name', '$city', '$street_name', '$house_number', '$email_address', '$password')";
+      $query = "INSERT INTO customer(first_name, middle_name, last_name, city, street, house_number, house_number_addon, phone, email_address, `password`) 
+      VALUES ('$first_name', '$middle_name', '$last_name', '$city', '$street_name', '$house_number', '$house_number_addon', '$phone', '$email_address', '$password')";
 
       if (mysqli_query($conn, $query)) {
         echo "New record created successfully";
@@ -56,8 +58,12 @@
         <input type="text" name="city">
         <div class="input-label">Street Name</div>
         <input type="text" name="street_name">
-        <div class="input-label">House Number</div>
-        <input type="number" name="house_number">
+        <div class="input-label">House Number *</div>
+        <input type="number" name="house_number" required>
+        <div class="input-label">House Number Addon</div>
+        <input type="text" name="house_number_addon">
+        <div class="input-label">Phone</div>
+        <input type="tel" name="phone">
         <div class="input-label">Email address *</div>
         <input type="text" name="email_address" required>
         <div class="input-label">Password *</div>
