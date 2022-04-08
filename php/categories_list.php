@@ -4,7 +4,7 @@ include("db_connect.php");
 include("functions.php");
 
 $user_data = check_login($conn);
-$sql = "SELECT * FROM product";
+$sql = "SELECT * FROM category";
 $result = mysqli_query($conn, $sql);
 
 session_start();
@@ -28,7 +28,7 @@ session_start();
 <body>
   <div id="container">
     <header>
-      <a href="logout.php">
+    <a href="logout.php">
         <i class='bx bx-log-out bx-sm'></i>
         Logout
       </a>
@@ -36,7 +36,7 @@ session_start();
     <?php include 'nav.php'; ?>
     <div class="inner-container">
       <button class="product-add">
-        <a class="product-add" href="add_product.php">add product</a>
+        <a class="product-add" href="add_category.php">add category</a>
       </button>
       <div class="table">
         <div class="column">
@@ -45,17 +45,6 @@ session_start();
           if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
               echo $row['name'] . '<br>';
-            }
-          }
-          ?>
-        </div>
-        <div class="column">
-          <div class="column-title">Price</div>
-          <?php
-          $result = mysqli_query($conn, $sql);
-          if ($result) {
-            while ($row = mysqli_fetch_assoc($result)) {
-              echo $row['price'] . '<br>';
             }
           }
           ?>
@@ -77,7 +66,7 @@ session_start();
           $result = mysqli_query($conn, $sql);
           if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
-              $id = $row['product_id'];
+              $id = $row['category_id'];
               echo
               '<button class="button-edit">
                 <a href="product_edit.php?updateid=' . $id . '"><i class="bx bxs-edit-alt"></i></a>

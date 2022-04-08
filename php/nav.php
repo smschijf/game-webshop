@@ -1,6 +1,10 @@
 <nav>
     <a href="product_list.php">
-    <i class='bx bx-home-alt-2'></i>
-      home
+    <i class='bx bx-grid'></i>
+      products
+    </a>
+    <a href="categories_list.php">
+    <i class='bx bx-category'></i>
+      categories
     </a>
 </nav>

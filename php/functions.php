@@ -12,8 +12,7 @@ function check_login($conn)
     {
       $user_data = mysqli_fetch_assoc($result);
       return $user_data;
+      header("Location: product_list.php");
     }
   }
-  header("Location: product_list.php");
-  die;
 }

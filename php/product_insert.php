@@ -1,6 +1,6 @@
 <?php
 
-include "php/db_connect.php";
+include "db_connect.php";
 
 if (isset($_POST["product_save"])) {
     $product_name = $_POST["product_name"];
@@ -19,6 +19,6 @@ if (mysqli_query($conn, $query)) {
     echo "Error: " . $query . "<br>" . mysqli_error($conn);
   }
 
-  header('Location: product_detail.php');
+  header('Location: product_list.php');
 }
 ?>

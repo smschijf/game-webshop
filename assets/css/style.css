@@ -12,17 +12,19 @@ html {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 5% 95%;
 }
 
 header {
     grid-column: 2;
     display: grid;
-    grid-template-columns: 80% 20%;
+    text-align: right;
+    padding: 1% 1% 0 0;
 }
 
-header i {
-    grid-column: 2;
+header a {
+  text-decoration: none;
+  color: black;
 }
 
 nav {
@@ -30,11 +32,12 @@ nav {
     color: white;
     grid-row: 1 / span 2;
     display: grid;
+    grid-template-rows: 5% 5%;
 }
 
 nav a {
   text-decoration: none;
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   margin: 10px;
 }

@@ -1,62 +1,36 @@
 <?php
 
-  session_start();
+session_start();
 
-    include("php/db_connect.php");
-    include("php/functions.php");
+include("php/db_connect.php");
+include("php/functions.php");
 
-    if(isset($_POST["submit"]))
-    {
-      echo "werkt";
-      $email_address = $_POST['email_address'];
-      $password = $_POST['password'];
 
-      echo $email_address;
-      echo $password;
+if (isset($_POST["submit"])) {
+  $email_address = $_POST['email_address'];
+  $password = $_POST['password'];
 
-      $query = "SELECT * FROM customer WHERE email_address = '$email_address' LIMIT 1";
-      $result = mysqli_query($conn, $query);
-      $row = mysqli_fetch_assoc($result);
-      if($result) {
-        echo "result works";
-      }
-      if(mysqli_num_rows($result) > 0) {
-        echo "test";
-        if($password === $row["password"]) {
-          $_SESSION["customer_id"] = $row["customer_id"];
-          header("Location: php/product_list.php");
-          echo "test";
-        }
-        else {
-          echo "Wrong password";
-        }
-      }
-      else {
-        echo "User not registered";
-      }
+  $query = "SELECT * FROM customer WHERE email_address = '$email_address' LIMIT 1";
+  $result = mysqli_query($conn, $query);
+  $row = mysqli_fetch_assoc($result);
+  if (mysqli_num_rows($result) > 0) {
+    if ($password === $row["password"]) {
+      $_SESSION["customer_id"] = $row["customer_id"];
+      header("Location: php/product_list.php");
+    } else {
+      echo "Wrong password";
     }
-      
-    //   if ($result)
-    //   {
-    //     if($result && mysqli_num_rows($result) > 0)
-    //     {
-    //       $user_data = mysqli_fetch_assoc($result);
-
-    //       if($user_data['password'] === $password)
-    //       {
-    //         $_SESSION['customer_id'] = $user_data['customer_id'];
-    //         header("Location: php/product_list.php");
-    //         die;
-    //       }
-    //     }
-    //   } echo "Please enter some valid information";
-    // }
+  } else {
+    echo "User not registered";
+  }
+}
 
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,6 +38,7 @@
   <title>admin</title>
   <link rel="stylesheet" href="assets/css/login.css">
 </head>
+
 <body>
   <div id="container">
     <div class="form-container">
@@ -79,4 +54,5 @@
     </div>
   </div>
 </body>
+
 </html>
