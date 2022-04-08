@@ -72,7 +72,7 @@ session_start();
                 <a href="product_edit.php?updateid=' . $id . '"><i class="bx bxs-edit-alt"></i></a>
                 </button>
                 <button class="button-delete">
-                <a href="product_delete.php?deleteid=' . $id . '" name="deleteid"><i class="bx bx-minus-circle" ></i></a>
+                <a href="category_delete.php?deleteid=' . $id . '" name="deleteid"><i class="bx bx-minus-circle" ></i></a>
                 </button> <br>';
             }
           }
