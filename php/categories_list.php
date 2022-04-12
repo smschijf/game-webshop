@@ -9,6 +9,10 @@ $result = mysqli_query($conn, $sql);
 
 session_start();
 
+if(!isset($_SESSION['customer_id'])) {
+  header("Location: ../index.php");
+}
+
 ?>
 
 
@@ -69,7 +73,7 @@ session_start();
               $id = $row['category_id'];
               echo
               '<button class="button-edit">
-                <a href="product_edit.php?updateid=' . $id . '"><i class="bx bxs-edit-alt"></i></a>
+                <a href="category_edit.php?updateid=' . $id . '"><i class="bx bxs-edit-alt"></i></a>
                 </button>
                 <button class="button-delete">
                 <a href="category_delete.php?deleteid=' . $id . '" name="deleteid"><i class="bx bx-minus-circle" ></i></a>

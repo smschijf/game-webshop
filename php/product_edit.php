@@ -2,6 +2,12 @@
 
 include "db_connect.php";
 
+session_start();
+
+if (!isset($_SESSION['customer_id'])) {
+  header("Location: ../index.php");
+}
+
 $id = $_GET['updateid'];
 $query = "SELECT * FROM `product` WHERE product_id=$id";
 $result = mysqli_query($conn, $query);
